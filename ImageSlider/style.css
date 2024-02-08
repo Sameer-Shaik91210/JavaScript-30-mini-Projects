@@ -22,6 +22,8 @@ body {
 }
 img {
   width: 100%;
+  filter: grayscale(100%);
+  transition: transform 0.3s;
 }
 .gallery::-webkit-scrollbar {
   display: none;
@@ -32,9 +34,15 @@ img {
   justify-content: center;
   margin: 10% auto;
 }
-#backBtn {
-  width: 50px;
-}
+#backBtn,
 #nextBtn {
   width: 50px;
+  cursor: pointer;
+  margin: 20px;
+  filter: grayscale(0%);
+}
+img:hover {
+  filter: grayscale(0%);
+  cursor: pointer;
+  transform: scale(1.1);
 }
